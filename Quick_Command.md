@@ -52,12 +52,21 @@ docker ps                                     (command to verify conatainers ins
 ## Useful command for docker:
 * docker pull 'image_name'
 * docker run 'image_name:version'
-* docker ps                                => To show installed containers
-* ctrl+c                                   => To terminate
-* docker run -d 'image_name'               => runs docker container in a detached mode + the container id
-* docker stop /start 'id_container'        => To stop & restart a running container, use its container_id; get container_id from history by running [docker ps-a ]
-* docker ps -a                             => To get history of all container both running & non-running 
-* docker run image_name
+* docker ps ............................. To show installed containers
+* docker run -d 'image_name' ............ runs docker container in a detached mode (allowing you to use terminal) + the container id 
+* docker stop / start 'id_container' ......To stop & restart a running container, use its container_id; get container_id from history by running [docker ps-a ]
+* docker ps -a ...........................To get history of all container both running & non-running 
+* ctrl+c  ............................... To terminate
 
 ![image](https://user-images.githubusercontent.com/58276505/172697647-f48a9175-c10c-415d-9327-220433edcf25.png)
 
+## How to use containers:
+![image](https://user-images.githubusercontent.com/58276505/172699104-c4cd3709-c3bb-407c-93b2-dfec933f8b64.png)
+
+* For 2 or more containers running on same port will signal error: Solution is to Bin then to a specific Port
+
+![image](https://user-images.githubusercontent.com/58276505/172701928-fd121a45-23cf-476e-99f4-ef68a564d9db.png)
+
+### To change docker ports
+
+docker run -d -p'6000:6794 ......... In above example (host_port:container_port) where, host_port = 6000 ,,,,6001,,,,,6002 & container_port= 6794
