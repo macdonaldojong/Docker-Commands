@@ -70,3 +70,5 @@ docker ps                                     (command to verify conatainers ins
 ### To change docker ports
 
 docker run -d -p'6000:6794 ......... In above example (host_port:container_port) where, host_port = 6000 ,,,,6001,,,,,6002 & container_port= 6794
+
+![image](https://user-images.githubusercontent.com/58276505/172704010-545ae5fb-41ff-49fa-b497-3c81a69ad761.png)
