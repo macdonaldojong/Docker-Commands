@@ -14,13 +14,16 @@ All what is needed is to install docker and 1 command to have it running on our 
 
 ![image](https://user-images.githubusercontent.com/58276505/172677240-40db547a-4b0b-463f-86ce-97462ae5bbdf.png)
 
-### command to Install a conatainer
-```
-docker run image_name                        (where: image_name:'version number' => postgress:10.10)
+### command to just install a container:
+- docker pull image_name
+- & then run it with
+- docker run command
 
-docker ps                                    
+### command to Install & run a conatainer
 ```
-![image](https://user-images.githubusercontent.com/58276505/172679877-6d0b1343-b720-4ff3-9b00-4e65b3805767.png)
+docker run postgress:9.6                      (where: postgress:10.10 => image_name: version number )                                  
+```
+![image](https://user-images.githubusercontent.com/58276505/172681904-a800e5d7-140b-4aa3-9f0e-52c29c56cc9e.png)
 
 ### command to verify conatainers installed
 ```
@@ -30,6 +33,31 @@ docker ps                                     (command to verify conatainers ins
 ![image](https://user-images.githubusercontent.com/58276505/172680904-2bd3113b-53b3-404d-8e2e-07032ce6fa75.png)
 
 ## Difference between image & container in docker?
-
 ![image](https://user-images.githubusercontent.com/58276505/172678459-f6f3844b-3991-446b-97f1-4ab3ae4fdac4.png)
+
+## Difference between Docker & Virtual Machine?
+![image](https://user-images.githubusercontent.com/58276505/172685961-dc406a98-be4b-4862-9834-2cd2b564be79.png)
+- Docker container uses the OS of host machine meanwhile VM are install with their own os
+- Speed: Docker container start & run faster compared to VM
+- Size: Docker container images are smaller ()
+- Compactibity: VM of any OS can run on any OS host but docker doesn't run well on all windows version kernel below 10 (except install docker toolbox to the kernel)
+
+![image](https://user-images.githubusercontent.com/58276505/172686170-84ea5f92-fb3f-4db3-965e-c81369122f74.png)
+
+## Install Docker: Mac , Windows 10-> (less than 10, install docker toolbox), linx
+* Create a repository and setup the download instructions for download, installer & dependencies for various OS and then use cmd [sudo add-apt-repository]
+* For Linux & Mac: Open official documentation community & enterprise version, download installer corrsponding to your OS.
+* For Windows: You must enable hyper-V & then run installer (All windows version below 10, can't run docker except Docker toolbox must be installed)
+
+## Useful command for docker:
+* docker pull 'image_name'
+* docker run 'image_name:version'
+* docker ps                                => To show installed containers
+* ctrl+c                                   => To terminate
+* docker run -d 'image_name'               => runs docker container in a detached mode + the container id
+* docker stop /start 'id_container'        => To stop & restart a running container, use its container_id; get container_id from history by running [docker ps-a ]
+* docker ps -a                             => To get history of all container both running & non-running 
+* docker run image_name
+
+![image](https://user-images.githubusercontent.com/58276505/172697647-f48a9175-c10c-415d-9327-220433edcf25.png)
 
