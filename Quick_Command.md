@@ -15,19 +15,19 @@ All what is needed is to install docker and 1 command to have it running on our 
 ![image](https://user-images.githubusercontent.com/58276505/172677240-40db547a-4b0b-463f-86ce-97462ae5bbdf.png)
 
 ### command to just install a container:
-- docker pull image_name
+-  => docker pull image_name
 - & then run it with
-- docker run command
+-  => docker run command
 
 ### command to Install & run a conatainer
 ```
-docker run postgress:9.6                      (where: postgress:10.10 => image_name: version number )                                  
+*  => docker run postgress:9.6                      (where: postgress:10.10 => image_name: version number )                                  
 ```
 ![image](https://user-images.githubusercontent.com/58276505/172681904-a800e5d7-140b-4aa3-9f0e-52c29c56cc9e.png)
 
 ### command to verify conatainers installed
 ```
-docker ps                                     (command to verify conatainers installed)                                  
+- => docker ps                                     (command to verify conatainers installed)                                  
 ```
 
 ![image](https://user-images.githubusercontent.com/58276505/172680904-2bd3113b-53b3-404d-8e2e-07032ce6fa75.png)
@@ -50,13 +50,13 @@ docker ps                                     (command to verify conatainers ins
 * For Windows: You must enable hyper-V & then run installer (All windows version below 10, can't run docker except Docker toolbox must be installed)
 
 ## Useful command for docker:
-* docker pull 'image_name'
-* docker run 'image_name:version'
-* docker ps ............................. To show installed containers
-* docker run -d 'image_name' ............ runs docker container in a detached mode (allowing you to use terminal) + the container id 
-* docker stop / start 'id_container' ......To stop & restart a running container, use its container_id; get container_id from history by running [docker ps-a ]
-* docker ps -a ...........................To get history of all container both running & non-running 
-* ctrl+c  ............................... To terminate
+-  => docker pull 'image_name'
+-  => docker run 'image_name:version'
+-  => docker ps ............................. To show installed containers
+-  => docker run -d 'image_name' ............ runs docker container in a detached mode (allowing you to use terminal) + the container id 
+-  => docker stop / start 'id_container' ......To stop & restart a running container, use its container_id; get container_id from history by running [docker ps-a ]
+-  => docker ps -a ...........................To get history of all container both running & non-running 
+-  => ctrl+c  ............................... To terminate
 
 ![image](https://user-images.githubusercontent.com/58276505/172697647-f48a9175-c10c-415d-9327-220433edcf25.png)
 
@@ -69,6 +69,6 @@ docker ps                                     (command to verify conatainers ins
 
 ### To change docker ports
 
-docker run -d -p'6000:6794 ......... In above example (host_port:container_port) where, host_port = 6000 ,,,,6001,,,,,6002 & container_port= 6794
+-  => docker run -d -p'6000:6794 ......... In above example (host_port:container_port) where, host_port = 6000 ,,,,6001,,,,,6002 & container_port= 6794
 
 ![image](https://user-images.githubusercontent.com/58276505/172704010-545ae5fb-41ff-49fa-b497-3c81a69ad761.png)
