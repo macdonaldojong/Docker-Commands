@@ -132,6 +132,48 @@ mongo)
 
 ![image](https://user-images.githubusercontent.com/58276505/172773561-aea7a6ad-d388-4729-b6d8-7d2845d96860.png)
 
+![image](https://user-images.githubusercontent.com/58276505/172879254-ae9cbd27-e65e-454f-81f4-597e8bf9e001.png)
+
+# DOCKER COMPOSE AS SOLUTION TO AUTOMATE DOCKER commands in the form of a yaml
+## difference between docker cmd & Docker-compose.yaml
+
+![image](https://user-images.githubusercontent.com/58276505/172880462-5e3d2210-899b-4d60-9e50-551a4b941658.png)
+
+![image](https://user-images.githubusercontent.com/58276505/172880670-25b1c6ab-5ad1-4fb8-9feb-5b382afa5393.png)
+
+## use Docker compose file
+download docker on your computer:
+
+* Create a dockerfile:  a fileName.yaml
+
+![image](https://user-images.githubusercontent.com/58276505/172881172-9913ebc3-4479-4d9a-8966-7acf48c4629e.png)
+
+On command line, run the dockerfile:
+```
+docker-compose -f <fileName.yaml> up      ----- (To start docker compose containers => up
+docker-compose -f <fileName.yaml> down     ----- (To stop docker compose containers => down
+```
+![image](https://user-images.githubusercontent.com/58276505/172882080-b03a20f1-dc90-403b-8baf-93a6174aa2cb.png)
+
+![image](https://user-images.githubusercontent.com/58276505/172882554-c617a814-edf7-44ab-bd00-fa0ef8a87403.png)
+
+![image](https://user-images.githubusercontent.com/58276505/172884192-57906fe3-df79-46f0-8216-011d5ac6fa11.png)
+
+## Build an Image using a Dockerfile
+
+### creating a Dockerfile
+
+![image](https://user-images.githubusercontent.com/58276505/172885181-bafe6f60-eca3-470a-b3dc-c1a868fd982c.png)
+
+```
+* Create a Dockerflie of name my-app
+# run command to build docker image:
+* docker build -t my-app:1.0 .
+```
+
+![image](https://user-images.githubusercontent.com/58276505/172887363-9b591965-f7e2-4297-9ecc-62b3c3dceeaa.png)
+
+
 
 
 
