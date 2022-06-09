@@ -169,12 +169,17 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 * Create a Dockerflie of name my-app
 # run command to build docker image:
 * docker build -t my-app:1.0 .
-```
 
+* docker images        (To check docker image created)
+* docker rm 'id'      (To delete container)
+* docker rmi 'id'       (To delete image)
+* docker logs ID       (To view logs)
+* docker exec -t ID  /bin/sh  (To look & exploy inside container directory)
+```
 ![image](https://user-images.githubusercontent.com/58276505/172887363-9b591965-f7e2-4297-9ecc-62b3c3dceeaa.png)
 
-
-
+## Use Docker on remote repository (aws: ECS)
+* Amazon Elastic Container Registry (ECS)
 
 
 ## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
