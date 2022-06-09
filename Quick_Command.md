@@ -61,7 +61,8 @@ All what is needed is to install docker and 1 command to have it running on our 
 * => docker exec -it 'ID' /bin/bash
 * => Exit
 * => docker pos
-* => 
+* => docker network ls     (To see all network)
+* => docker network create name-network
 ![image](https://user-images.githubusercontent.com/58276505/172697647-f48a9175-c10c-415d-9327-220433edcf25.png)
 
 ## How to use containers:
@@ -96,6 +97,42 @@ All what is needed is to install docker and 1 command to have it running on our 
 ![image](https://user-images.githubusercontent.com/58276505/172767215-05c9d572-bb09-4e7b-a964-db9c45dd515d.png)
 
 ![image](https://user-images.githubusercontent.com/58276505/172767708-a50bfd59-1cc7-4cbc-8739-4b5ae1141282.png)
+
+## commands to connect containers for use
+
+* => docker network ls
+* => docker network create name-network    (NAME-NETWORK = mongo-network)
+* => docker run  -d -p --name -e   (NB: Always verify documentation in docker hub, especially for env variables)
+
+### Create and connect mongoDB outside / host port -p 27017 (create container network: mongo-network, name: mongodb, user, password)
+
+```
+{ e.g docker run -d \
+-p 27017:27017 \                           (connecting mongoDB to host open port at 27017 )
+-e MONGO_INITDB_ROOT_USERNAME=admin \
+-e MONGO_INITDB_ROOT_PASSWORD=password \
+--name mongoDB \
+--mongo-network \
+mongo)
+```
+
+![image](https://user-images.githubusercontent.com/58276505/172773711-2ca32f2d-5699-45f4-859e-b9f944f0cc75.png)
+
+### USE mongoExpress for UI and connect to mongoDB through (through mongo-network with name: mongo-express) (check Documentation -env)
+
+```
+{ e.g docker run -d \
+-p 8881:8881 \                           (connecting mongoDB to host open port at 27017 )
+-e Me_INITDB_ROOT_USERNAME=admin \
+-e Me_INITDB_ROOT_PASSWORD=password \
+--name mongo-Express \
+--mongo-network \
+mongo)
+```
+
+![image](https://user-images.githubusercontent.com/58276505/172773561-aea7a6ad-d388-4729-b6d8-7d2845d96860.png)
+
+
 
 
 ## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
