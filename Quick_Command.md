@@ -51,19 +51,24 @@ All what is needed is to install docker and 1 command to have it running on our 
 
 ## Useful command for docker:
 *  => docker pull 'image_name'
-*  => docker run 'image_name:version'
-*  => docker ps ............................. To show installed containers
-*  => docker run -d 'image_name' ............ runs docker container in a detached mode (allowing you to use terminal) + the container id 
-*  => docker stop / start 'id_container' ......To stop & restart a running container, use its container_id; get container_id from history by running [docker ps-a ]
-*  => docker ps -a ...........................To get history of all container both running & non-running 
-*  => ctrl+c  ............................... To terminate
-
+*  => docker run --name                      (docker run creates a new container; --name= 'image_name:version')
+*  => docker run -d -p --name                (-d = detachable, -p= specify port, --name= specify image &/version eg {docker run -d -p'6000:6794})
+*  => docker ps ........................     (To show installed containers)
+*  => docker run -d 'image_name:latest' ..........  (runs docker container in a detached mode (allowing you to use terminal) + the container id) 
+*  => docker stop / start 'id_container' ... (To stop & restart a running container, use its container_id; get container_id from history by running {docker ps-a})
+*  => docker ps -a ......................... (To get history of all container both running & non-running )
+*  => ctrl+c  ...............................(To terminate )
+* => docker exec -it 'ID' /bin/bash
+* => Exit
+* => docker pos
+* => 
 ![image](https://user-images.githubusercontent.com/58276505/172697647-f48a9175-c10c-415d-9327-220433edcf25.png)
 
 ## How to use containers:
 ![image](https://user-images.githubusercontent.com/58276505/172699104-c4cd3709-c3bb-407c-93b2-dfec933f8b64.png)
 
-* For 2 or more containers running on same port will signal error: Solution is to Bin then to a specific Port eg 6000 [docker run -d -p'6000:6794']
+* For 2 or more containers running on same port will signal error:
+* Solution is to Bin then to a specific Port eg 6000 [docker run -d -p'6000:6794']
 
 ![image](https://user-images.githubusercontent.com/58276505/172701928-fd121a45-23cf-476e-99f4-ef68a564d9db.png)
 
@@ -73,4 +78,24 @@ All what is needed is to install docker and 1 command to have it running on our 
 
 ![image](https://user-images.githubusercontent.com/58276505/172704010-545ae5fb-41ff-49fa-b497-3c81a69ad761.png)
 
-  
+## Trouble shouting a container
+* => docker ps            (se container details but no logs)
+* => docker logs 'ID'     (put specific container ID to see it's logs)
+* => docker logs 'container_name'     (put specific container container_name to see it's logs)
+
+![image](https://user-images.githubusercontent.com/58276505/172763784-b14acead-f728-412c-af0f-692f6f5478d0.png)
+* docker exec -it 'ID' /bin/bash     (get the terminal of a container to check anything as user/root) (Always specify ID=container id)
+* Exit  (To exit the container)
+
+![image](https://user-images.githubusercontent.com/58276505/172764636-ecac5493-4a8d-4e46-9b1e-87b4a93ab6b7.png)
+
+## USE of Docker
+
+![image](https://user-images.githubusercontent.com/58276505/172766502-0e669156-53f2-4e25-9864-b4d4052272ba.png)
+
+![image](https://user-images.githubusercontent.com/58276505/172767215-05c9d572-bb09-4e7b-a964-db9c45dd515d.png)
+
+![image](https://user-images.githubusercontent.com/58276505/172767708-a50bfd59-1cc7-4cbc-8739-4b5ae1141282.png)
+
+
+## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
