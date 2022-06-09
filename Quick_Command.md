@@ -157,11 +157,11 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 
 ![image](https://user-images.githubusercontent.com/58276505/172882554-c617a814-edf7-44ab-bd00-fa0ef8a87403.png)
 
-![image](https://user-images.githubusercontent.com/58276505/172884192-57906fe3-df79-46f0-8216-011d5ac6fa11.png)
-
 ## Build an Image using a Dockerfile
 
 ### creating a Dockerfile
+
+![image](https://user-images.githubusercontent.com/58276505/172888012-1b8cf9ad-bcb8-4767-9964-c812b9f1cbe3.png)
 
 ![image](https://user-images.githubusercontent.com/58276505/172885181-bafe6f60-eca3-470a-b3dc-c1a868fd982c.png)
 
