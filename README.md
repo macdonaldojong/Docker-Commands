@@ -1,10 +1,16 @@
 # Learn_Docker
 
 🚀 5. Main Docker Commands
-* docker pull, docker run, docker ps, docker stop, docker start, port mapping
+* docker pull
+* docker run
+* docker ps
+* docker stop
+* docker start
+* port mapping
 
 🚀 6. Debugging a Container
-* docker logs, docker exec -it
+* docker logs
+* docker exec -it
 
 🚀  7. Demo Project Overview - Docker in Practice (Nodejs App with MongoDB and MongoExpress UI)
 
