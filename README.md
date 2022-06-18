@@ -27,7 +27,7 @@
 🚀 10. Dockerfile - Building our own Docker Image
 * What is a Dockerfile?
 * Create the Dockerfile
-* Build an image with Dockerfile (NB: install node, if application is .js / on docker hub, use this to install node => docker pull node)
+* Build an image with Dockerfile (NB: Node needed to package app; Install node, if application is .js / on docker hub, use this to install node => docker pull node)
 
 🚀 11. Private Docker Repository - Pushing our built Docker Image into a private Registry on AWS
 * Private Repository on AWS ECR
