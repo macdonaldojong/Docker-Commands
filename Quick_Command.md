@@ -183,5 +183,6 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 ## Use Docker on remote repository (aws: ECS)
 * Amazon Elastic Container Registry (ECS)
 
-
+## Additing Volumes to secure your data when containers are stop/deleted
+* docker run --name <webserver> -v <volume>:<"/app's path"> nginx    (nginx= image)
 ## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
