@@ -206,9 +206,10 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 * docker exec -it ID  /bin/sh -- {path => /bin/sh, bash, /bin/bash, "it" for iterating mode}
   
 * docker run  -d  --name <webserver>  -v <volume1_name>:<"/path attach to app">  nginx  --- {/path attach to app}
-* docker ls && mkdir test.txt 
-* docker run -d --name webserver --mount source=/test  destination=/app  nginx   --- {/app  for bin-mount volumes}
+* docker ls && touch test.txt && exit
 
+* docker run -d --name webserver --mount source=/test, target=/app  nginx   --- {/app  for bin-mount volumes}
+* docker run -d --name webserver --mount type:bind, source=/root/test, target=/app  nginx   --- {/app  complete path for bin-mount volumes}
 ![image](https://user-images.githubusercontent.com/58276505/174498163-bef8d53a-fbe9-4072-9fef-ca86462d72da.png)
 
   
