@@ -50,7 +50,7 @@ All what is needed is to install docker and 1 command to have it running on our 
 * For Windows: You must enable hyper-V & then run installer (All windows version below 10, can't run docker except Docker toolbox must be installed)
 
 ## Useful command for docker:
-*  => docker pull 'image_name'
+*  => docker pull <image_name>
 *  => docker run --name                      (docker run creates a new container; --name= 'image_name:version')
 *  => docker run -d -p --name                (-d = detachable, -p= specify port, --name= specify image &/version eg {docker run -d -p'6000:6794})
 *  => docker ps ........................     (To show installed containers)
@@ -167,22 +167,59 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 
 ```
 * Create a Dockerflie of name my-app
-# run command to build docker image:
+
+## run command to build docker image:
 * docker build -t my-app:1.0 .
 
 * docker images        (To check docker image created)
-* docker rm 'id'      (To delete container)
-* docker rmi 'id'       (To delete image)
+* docker rm 'id'      (To delete container; add -f to force)
+* docker rmi 'id'       (To delete image; add -f to force)
 * docker logs ID       (To view logs)
-* docker logs -f ID       (-f: follow logs output or just check on docker logs --help)
-* docker inspect <ID / name>   (To get all container details)
-* docker exec -t ID  /bin/sh  (To look & exploy inside container directory)
+* docker logs -f ID    -- (-f: follow logs output or just check on docker logs --help)
+* docker inspect <ID/name>   -- (To get all container details)
+* docker exec -it ID  /bin/sh  -- (To look & exploy inside container directory)
+* docker exec -it ID  bash  --  (To look & exploy inside container directory)
 ```
 ![image](https://user-images.githubusercontent.com/58276505/172887363-9b591965-f7e2-4297-9ecc-62b3c3dceeaa.png)
 
 ## Use Docker on remote repository (aws: ECS)
 * Amazon Elastic Container Registry (ECS)
 
-## Additing Volumes to secure your data when containers are stop/deleted
-* docker run --name <webserver> -v <volume>:<"/app's path"> nginx    (nginx= image)
+## Checking details and Logs:
+* docker ps
+* docker ps -a
+* docker logs
+* 
+* docker logs ID -- {docker help --help}
+* docker pos
+* docker network ls     (To see all network)
+* docker volume ls
+* docker exec -it 'ID' /bin/bash
+* Exit  (ctrl+c)
+
+
+## Additing Volumes to secure your data when containers are stop/deleted {persistence of data}
+* docker volume ls         ----{pwd, cd, ls, ps, ls -a, /var/lib/docker/volumes on host/source container, /app, mnt/app for destination}
+* docker volume create    --- (ananymous _v, add --name volume1 for name volumes)
+* docker volume inspect
+* docker run --name <webserver> -v <volume>:<"/app's path">  nginx    ---   {nginx= image}
+* docker exec -it ID  /bin/sh -- {path => /bin/sh, bash, /bin/bash, "it" for iterating mode}
+  
+* docker run  -d  --name <webserver>  -v <volume1_name>:<"/path attach to app">  nginx  --- {/path attach to app}
+* docker ls && mkdir test.txt 
+* docker run -d --name webserver --mount source=/test  destination=/app  nginx   --- {/app  for bin-mount volumes}
+
+![image](https://user-images.githubusercontent.com/58276505/174498163-bef8d53a-fbe9-4072-9fef-ca86462d72da.png)
+
+  
+## Docker Network
+* docker pos
+* docker network ls     --- (To see all network)
+* docker network create name-network
+* docker network create name-network
+* docker network create name-network
+
+  
+
+  
 ## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
