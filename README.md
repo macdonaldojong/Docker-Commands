@@ -1,4 +1,13 @@
 # Learn_Docker
+Important links:
+
+Installation: https://docs.docker.com/engine/install/ 
+* Docker account&Private repository: https://docs.docker.com/docker-hub/#step-1-sign-up-for-a-docker-account
+* Volumes: https://docs.docker.com/storage/volumes/    https://docs.docker.com/storage/volumes/#create-and-manage-volumes
+* Network: https://docs.docker.com/network/
+* Refference: https://docs.docker.com/engine/reference/builder/
+* Docker-compose: https://docs.docker.com/compose/
+* Docker-Swarm: https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/
 
 🚀 5. Main Docker Commands
 * docker pull
