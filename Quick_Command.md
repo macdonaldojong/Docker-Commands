@@ -174,6 +174,8 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 * docker rm 'id'      (To delete container)
 * docker rmi 'id'       (To delete image)
 * docker logs ID       (To view logs)
+* docker logs -f ID       (-f: follow logs output or just check on docker logs --help)
+* docker inspect <ID / name>   (To get all container details)
 * docker exec -t ID  /bin/sh  (To look & exploy inside container directory)
 ```
 ![image](https://user-images.githubusercontent.com/58276505/172887363-9b591965-f7e2-4297-9ecc-62b3c3dceeaa.png)
