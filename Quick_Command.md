@@ -201,6 +201,7 @@ docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose conta
 ## Additing Volumes to secure your data when containers are stop/deleted {persistence of data}
 * docker volume ls      --   -- {pwd, cd, ls, ps, ls -a, /var/lib/docker/volumes on host/source container, /app, mnt/app for destination}
 * docker volume create  --   -- (ananymous _v, add --name volume1 for name volumes)
+* docker volume rm {ID/name}
 * docker volume inspect
 * docker run --name <webserver> -v <volume>:<"/app's path">  nginx  --   -- {nginx= image}
 * docker exec -it ID  /bin/sh  --   --  {path => /bin/sh, bash, /bin/bash, "it" for iterating mode}
@@ -209,7 +210,7 @@ docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose conta
 * docker ls && touch testlocal.txt && exit
 
 * docker run -d --name webserver --mount {type=bind,source=/testlocal,target=/app}  nginx  --   -- {For bin mount volumes, newly created container & volume}
-* docker run -d --name webserver --mount {source=/root/test, target=/app}  nginx -- {bin mount, create new container link existing volume at source=/root/test}
+* docker run -d --name webserver --mount {source=/root/test, target=/app}  nginx --  -- {bin mount, create new container link existing volume at source=/root/test}
 
 ![image](https://user-images.githubusercontent.com/58276505/174498163-bef8d53a-fbe9-4072-9fef-ca86462d72da.png)
 
@@ -217,11 +218,19 @@ docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose conta
 ## Docker Network
 * docker pos
 * docker network ls     --- (To see all network)
-* docker network create name-network
-* docker network create name-network
-* docker network create name-network
+* docker network create <mynet> --  -- {name-network = mynet} 
+* docker network create --driver overlay <myoverl> --  -- {driver overlay specified & used only for swarm enabled, networkN = myoverl}
+* docker network create --driver bridge <mybridge> --  -- {driver=bridge & default network if not specified, networkN = mybridge}
+* docker inspec {ID/name} -- -- {running container network is bridge by default}
+* docker network rm {networkID/name}
+* docker run -d --name {webserver1} --network {mynet} nginx -- -- {run a container & assign an existing network with name}
 
-  
+## dockerfile, docker image, docker compose
+*
 
+### docker image from base or host location (. )
+* docker build -t {thetips4you/nginxOwn_image:1.0 . }  -- -- {must specify account (thetips4you), tag (1.0), ownImage(nginxOwn_image:1.0) & path( .) base location}
+### docker image from private repo (docker hub)
+* 
   
 ## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
