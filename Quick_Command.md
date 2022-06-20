@@ -61,7 +61,7 @@ All what is needed is to install docker and 1 command to have it running on our 
 * => docker exec -it 'ID' /bin/bash
 * => Exit
 * => docker pos
-* => docker network ls     (To see all network)
+* => docker network ls  --   -- (To see all network)
 * => docker network create name-network
 ![image](https://user-images.githubusercontent.com/58276505/172697647-f48a9175-c10c-415d-9327-220433edcf25.png)
 
@@ -80,9 +80,9 @@ All what is needed is to install docker and 1 command to have it running on our 
 ![image](https://user-images.githubusercontent.com/58276505/172704010-545ae5fb-41ff-49fa-b497-3c81a69ad761.png)
 
 ## Trouble shouting a container
-* => docker ps            (se container details but no logs)
-* => docker logs 'ID'     (put specific container ID to see it's logs)
-* => docker logs 'container_name'     (put specific container container_name to see it's logs)
+* => docker ps    --   -- (se container details but no logs)
+* => docker logs 'ID'   --   -- (put specific container ID to see it's logs)
+* => docker logs 'container_name'   --   --  (put specific container container_name to see it's logs)
 
 ![image](https://user-images.githubusercontent.com/58276505/172763784-b14acead-f728-412c-af0f-692f6f5478d0.png)
 * docker exec -it 'ID' /bin/bash     (get the terminal of a container to check anything as user/root) (Always specify ID=container id)
@@ -150,8 +150,8 @@ download docker on your computer:
 
 On command line, run the dockerfile:
 ```
-docker-compose -f <fileName.yaml> up      ----- (To start docker compose containers => up
-docker-compose -f <fileName.yaml> down     ----- (To stop docker compose containers => down
+docker-compose -f <fileName.yaml> up       --   -- (To start docker compose containers => up
+docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose containers => down
 ```
 ![image](https://user-images.githubusercontent.com/58276505/172882080-b03a20f1-dc90-403b-8baf-93a6174aa2cb.png)
 
@@ -171,14 +171,14 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 ## run command to build docker image:
 * docker build -t my-app:1.0 .
 
-* docker images        (To check docker image created)
-* docker rm 'id'      (To delete container; add -f to force)
-* docker rmi 'id'       (To delete image; add -f to force)
-* docker logs ID       (To view logs)
-* docker logs -f ID    -- (-f: follow logs output or just check on docker logs --help)
-* docker inspect <ID/name>   -- (To get all container details)
-* docker exec -it ID  /bin/sh  -- (To look & exploy inside container directory)
-* docker exec -it ID  bash  --  (To look & exploy inside container directory)
+* docker images  --   --  (To check docker image created)
+* docker rm 'id'   --   -- (To delete container; add -f to force)
+* docker rmi 'id'  --   -- (To delete image; add -f to force)
+* docker logs ID   --   -- (To view logs)
+* docker logs -f ID   --   --  (-f: follow logs output or just check on docker logs --help)
+* docker inspect <ID/name>   --   -- (To get all container details)
+* docker exec -it ID  /bin/sh  --   -- (To look & exploy inside container directory)
+* docker exec -it ID  bash   --   -- (To look & exploy inside container directory)
 ```
 ![image](https://user-images.githubusercontent.com/58276505/172887363-9b591965-f7e2-4297-9ecc-62b3c3dceeaa.png)
 
@@ -190,26 +190,27 @@ docker-compose -f <fileName.yaml> down     ----- (To stop docker compose contain
 * docker ps -a
 * docker logs
 * 
-* docker logs ID -- {docker help --help}
+* docker logs ID  --   --  {docker help --help}
 * docker pos
-* docker network ls     (To see all network)
+* docker network ls  --   -- (To see all network)
 * docker volume ls
 * docker exec -it 'ID' /bin/bash
 * Exit  (ctrl+c)
 
 
 ## Additing Volumes to secure your data when containers are stop/deleted {persistence of data}
-* docker volume ls         ----{pwd, cd, ls, ps, ls -a, /var/lib/docker/volumes on host/source container, /app, mnt/app for destination}
-* docker volume create    --- (ananymous _v, add --name volume1 for name volumes)
+* docker volume ls      --   -- {pwd, cd, ls, ps, ls -a, /var/lib/docker/volumes on host/source container, /app, mnt/app for destination}
+* docker volume create  --   -- (ananymous _v, add --name volume1 for name volumes)
 * docker volume inspect
-* docker run --name <webserver> -v <volume>:<"/app's path">  nginx    ---   {nginx= image}
-* docker exec -it ID  /bin/sh -- {path => /bin/sh, bash, /bin/bash, "it" for iterating mode}
+* docker run --name <webserver> -v <volume>:<"/app's path">  nginx  --   -- {nginx= image}
+* docker exec -it ID  /bin/sh  --   --  {path => /bin/sh, bash, /bin/bash, "it" for iterating mode}
   
-* docker run  -d  --name <webserver>  -v <volume1_name>:<"/path attach to app">  nginx  --- {/path attach to app}
-* docker ls && touch test.txt && exit
+* docker run  -d  --name <webserver>  -v <volume1_name>:<"/path attach to app">  nginx  --   -- {/path attach to app}
+* docker ls && touch testlocal.txt && exit
 
-* docker run -d --name webserver --mount source=/test, target=/app  nginx   --- {/app  for bin-mount volumes}
-* docker run -d --name webserver --mount type:bind, source=/root/test, target=/app  nginx   --- {/app  complete path for bin-mount volumes}
+* docker run -d --name webserver --mount {type=bind,source=/testlocal,target=/app}  nginx  --   -- {For bin mount volumes, newly created container & volume}
+* docker run -d --name webserver --mount {source=/root/test, target=/app}  nginx -- {bin mount, create new container link existing volume at source=/root/test}
+
 ![image](https://user-images.githubusercontent.com/58276505/174498163-bef8d53a-fbe9-4072-9fef-ca86462d72da.png)
 
   
