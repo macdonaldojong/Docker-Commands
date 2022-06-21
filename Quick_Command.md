@@ -260,7 +260,7 @@ https://www.youtube.com/watch?v=zMC3SyeaDGU&list=PLVx1qovxj-amqyqHceAhkcsopzi4PF
   
 https://www.youtube.com/watch?v=CEuWK3Imdtg&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=38
 
-### Visualising docker set up
+### Monitoring and Visualization in docker
 https://www.youtube.com/watch?v=bWXwKTGTCp4&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=34
 
 ### Docker Stack
