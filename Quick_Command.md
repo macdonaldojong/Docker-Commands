@@ -229,8 +229,12 @@ docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose conta
 *
 
 ### docker image from base or host location (. )
-* docker build -t {thetips4you/nginxOwn_image:1.0 . }  -- -- {must specify account (thetips4you), tag (1.0), ownImage(nginxOwn_image:1.0) & path( .) base location}
+* docker build -t {thetips4you/nginxOwn_image:1.0 . }  -- -- {must specify accountdetails (thetips4you), tag (1.0), ownImage(nginxOwn_image:1.0) & path( .) base location}
+
 ### docker image from private repo (docker hub)
+* docker build -t {thetips4you/nginxOwn_image:1.0 . }  -- -- {must specify accountdetails (thetips4you), tag (1.0), ownImage(nginxOwn_image:1.0) & path( .) base location}
+* docker login {login to docker hub to push created image, specify, user name=, password=}
+* docker push {image= account/ownImage:1.0}
 * 
   
 ## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
