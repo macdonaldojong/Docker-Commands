@@ -213,8 +213,11 @@ docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose conta
 * docker run -d --name webserver --mount {source=/root/test, target=/app}  nginx --  -- {bin mount, create new container link existing volume at source=/root/test}
 
 ![image](https://user-images.githubusercontent.com/58276505/174498163-bef8d53a-fbe9-4072-9fef-ca86462d72da.png)
+
 https://www.youtube.com/watch?v=fkzpkZTks7w&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=42
+  
 https://www.youtube.com/watch?v=ivEQ3rFe-sg&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=22
+  
 https://www.youtube.com/watch?v=DJtvQYicALM&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=24
   
 ## Docker Network
@@ -248,9 +251,13 @@ https://www.youtube.com/watch?v=iARL7iFyasE&list=PLVx1qovxj-amqyqHceAhkcsopzi4PF
 
 ### Docker Swarm
 https://www.youtube.com/watch?v=SHD8Bl0jEfE&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=21
+ 
 https://www.youtube.com/watch?v=r_4__wmyrcw&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=39
+  
 https://www.youtube.com/watch?v=wLZ4j730bDo&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=41
+  
 https://www.youtube.com/watch?v=zMC3SyeaDGU&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=30
+  
 https://www.youtube.com/watch?v=CEuWK3Imdtg&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=38
 
 ### Visualising docker set up
