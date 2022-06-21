@@ -213,7 +213,9 @@ docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose conta
 * docker run -d --name webserver --mount {source=/root/test, target=/app}  nginx --  -- {bin mount, create new container link existing volume at source=/root/test}
 
 ![image](https://user-images.githubusercontent.com/58276505/174498163-bef8d53a-fbe9-4072-9fef-ca86462d72da.png)
-
+https://www.youtube.com/watch?v=fkzpkZTks7w&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=42
+https://www.youtube.com/watch?v=ivEQ3rFe-sg&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=22
+https://www.youtube.com/watch?v=DJtvQYicALM&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=24
   
 ## Docker Network
 * docker pos
@@ -225,16 +227,37 @@ docker-compose -f <fileName.yaml> down     --   -- (To stop docker compose conta
 * docker network rm {networkID/name}
 * docker run -d --name {webserver1} --network {mynet} nginx -- -- {run a container & assign an existing network with name}
 
+https://www.youtube.com/watch?v=c8iV1Rua4ZM&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=44
 ## dockerfile, docker image, docker compose
 *
 
-### docker image from base or host location (. )
+### Docker image from base or host location (. )
 * docker build -t {thetips4you/nginxOwn_image:1.0 . }  -- -- {must specify accountdetails (thetips4you), tag (1.0), ownImage(nginxOwn_image:1.0) & path( .) base location}
 
-### docker image from private repo (docker hub)
+### Pushing the docker image to "Docker Hub"
 * docker build -t {thetips4you/nginxOwn_image:1.0 . }  -- -- {must specify accountdetails (thetips4you), tag (1.0), ownImage(nginxOwn_image:1.0) & path( .) base location}
 * docker login {login to docker hub to push created image, specify, user name=, password=}
 * docker push {image= account/ownImage:1.0}
-* 
+
+https://www.youtube.com/watch?v=di3H96K0XEU&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=40
   
+### Docker Compose
+
+### Multi Container app using Docker Compose
+https://www.youtube.com/watch?v=iARL7iFyasE&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=1
+
+### Docker Swarm
+https://www.youtube.com/watch?v=SHD8Bl0jEfE&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=21
+https://www.youtube.com/watch?v=r_4__wmyrcw&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=39
+https://www.youtube.com/watch?v=wLZ4j730bDo&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=41
+https://www.youtube.com/watch?v=zMC3SyeaDGU&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=30
+https://www.youtube.com/watch?v=CEuWK3Imdtg&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=38
+
+### Visualising docker set up
+https://www.youtube.com/watch?v=bWXwKTGTCp4&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=34
+
+### Docker Stack
+https://www.youtube.com/watch?v=KCP6X-UB0hc&list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc&index=33
+
+
 ## Check application code here => https://www.youtube.com/watch?v=3c-iBn73dDE&t=1156s
