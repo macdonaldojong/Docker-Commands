@@ -20,6 +20,7 @@ Installation: https://docs.docker.com/engine/install/
 🚀 6. Debugging a Container
 * docker logs
 * docker exec -it
+* docker inspect ID
 
 🚀  7. Demo Project Overview - Docker in Practice (Nodejs App with MongoDB and MongoExpress UI)
 
@@ -50,3 +51,9 @@ Installation: https://docs.docker.com/engine/install/
 * When do we need Docker Volumes?
 * What is Docker Volumes?
 * Docker Volumes Types
+
+🚀 14. Push Image to private repository (Docker hub, ECS, )
+* On cmdline, type:  docker login
+* docker push tags
+* docker pull tag
+
